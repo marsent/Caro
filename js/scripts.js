@@ -55,22 +55,23 @@
     $(window).scroll(navbarCollapse);
 })(jQuery); // End of use strict
 
-async function  sendForm() {
-    // đem tất cả dữ liệu trong form id là 'google-form' gom thành biến data
-    let data = $('#contactForm').serialize();
+// async function  sendForm() {
+//     // đem tất cả dữ liệu trong form id là 'google-form' gom thành biến data
+//     let data = $('#contactForm').serialize();
 
-  await  $.ajax({ //Sử dụng Ajax gửi dữ liệu đi
-        url: 'https://script.google.com/macros/s/AKfycbzb5K3FtBIuSk6u9UN6Ep-1CkK5LIjn-vPJN7prM23n3dVTKkp-dLT19A/exec',
-        method: 'GET',
-        dataType: 'json',
-        data: data,
-        success: function(responseData, textStatus, jqXHR) {
-            console.log("Success");
-        },
-        error: function(jqXHR, textStatus, errorThrown) {
-            console.log(errorThrown);
-        }
-    });
+// //   await  $.ajax({ //Sử dụng Ajax gửi dữ liệu đi
+// //         url: 'https://script.google.com/macros/s/AKfycbzb5K3FtBIuSk6u9UN6Ep-1CkK5LIjn-vPJN7prM23n3dVTKkp-dLT19A/exec',
+// //         method: 'GET',
+// //         dataType: 'json',
+// //         data: data,
+// //         success: function(responseData, textStatus, jqXHR) {
+// //             Swal.fire({
+// //                 icon:'success'
+// //             })
+// //         },
+// //         error: function(jqXHR, textStatus, errorThrown) {
+// //             console.log(errorThrown);
+// //         }
+// //     });
 
-    return true;
-};
+// };
